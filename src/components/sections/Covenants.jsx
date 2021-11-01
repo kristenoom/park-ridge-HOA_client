@@ -2,8 +2,9 @@ import { Accordion, AccordionItem, AccordionHeader } from 'reactstrap';
 
 const Covenants = () => {
     return (
-        <div>
-  <Accordion
+        <div className="main" style={{ width: "100%" }}>
+        <h1 style={{paddingLeft: "15px"}}>Covenants and Bylaws</h1>
+  <Accordion className="covenants"
     open="1"
     toggle={function noRefCheck(){}}
   >
@@ -66,8 +67,48 @@ const Covenants = () => {
             Article VI - General Provisions
             </AccordionHeader>
             <AccordionItem accordionId="6">
-            <strong>Section 1. Residential Purposes. </strong>
-            No Lot shall be used except for residential purposes. No building shall be erected, altered, placed, or permitted to remain on any Lot other than one detached single-family dwelling not to exceed two and one-half stories in height. Each Dwelling Unit shall include not less than a two car garage, which shall be built as part of said structure and attached thereto.
+            <p><strong>Section 1. Residential Purposes. </strong>
+                        No Lot shall be used except for residential purposes. No building shall be erected, altered, placed, or permitted to remain on any Lot other than one detached single-family dwelling not to exceed two and one-half stories in height. Each Dwelling Unit shall include not less than a two car garage, which shall be built as part of said structure and attached thereto.</p>
+                        <p><strong>Section 2. </strong></p>
+                        <p><strong>Section 3. </strong></p>
+                        <p><strong>Section 4. </strong></p>
+                        <p><strong>Section 5. </strong></p>
+                        <p><strong>Section 6. </strong></p>
+                        <p><strong>Section 7. </strong></p>
+                        <p><strong>Section 8. </strong></p>
+                        <p><strong>Section 9. Garages </strong>All Dwelling Units must have at least a full-size, attached, two-car garage.</p>
+                        <p><strong>Section 10. </strong></p>
+                        <p><strong>Section 11. </strong></p>
+                        <p><strong>Section 12. </strong></p>
+                        <p><strong>Section 13. Yard Light </strong>An automatic dusk-to-dawn light of a type and at a location approved by the Architectural Control Committee shall be isntalled by the builder or Lot Owner on each Lot in front of the front building line.</p>
+                        <p><strong>Section 14. </strong></p>
+                        <p><strong>Section 15. </strong></p>
+                        <p><strong>Section 16. </strong></p>
+                        <p><strong>Section 17. </strong></p>
+                        <p><strong>Section 18. </strong></p>
+                        <p><strong>Section 19. </strong></p>
+
+                        <p><strong>Section 20. </strong></p>
+                        <p><strong>Section 21. </strong></p>
+                        <p><strong>Section 22. </strong></p>
+                        <p><strong>Section 23. </strong></p>
+                        <p><strong>Section 24. </strong></p>
+                        <p><strong>Section 25. </strong></p>
+                        <p><strong>Section 26. </strong></p>
+                        <p><strong>Section 27. Animals </strong>No animals, livestock, or poultry of any kind shall be raised, bred, or kept on any Lot, except that dogs, cats, or other household pets may be kept, provided that they are not kept, bred, or maintained for any commercial purpose.</p>
+                        <p><strong>Section 28. </strong></p>
+                        <p><strong>Section 29. </strong></p>
+                        
+
+                        <p><strong>Section 30. </strong></p>
+                        <p><strong>Section 31. </strong></p>
+                        <p><strong>Section 32. </strong></p>
+                        <p><strong>Section 33. </strong></p>
+                        <p><strong>Section 34. </strong></p>
+                        <p><strong>Section 35. </strong></p>
+                        <p><strong>Section 36. </strong></p>
+                        <p><strong>Section 37. </strong></p>
+                        <p><strong>Section 38. </strong></p>
             </AccordionItem>
         </AccordionItem>
   </Accordion>

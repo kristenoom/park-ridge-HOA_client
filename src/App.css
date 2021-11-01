@@ -89,6 +89,10 @@ body {
     flex: 100%;
   }
 }
+.covenants {
+  width: 95%;
+  padding-left: 15px;
+}
 /* HEADER */
 .header {
   background-color: #53565a;
