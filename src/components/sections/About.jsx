@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 export default class About extends Component {
   render() {
     return (
-        <Container className="text">
+        <Container className="main text">
             <h1>About</h1>
                 <span className="heading-meta">About Park Ridge Community</span>
                 <h2 className="colorlib-heading">Where are we located?</h2>

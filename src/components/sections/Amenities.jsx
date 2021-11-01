@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 export default class Amenities extends Component {
   render() {
     return (
-        <Container className="text">
+        <Container className="main text">
             <h1>Amenities</h1>
             <p>Park</p>
             <p>Pond</p>

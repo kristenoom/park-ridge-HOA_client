@@ -21,8 +21,8 @@ export default class Homes extends Component {
     // };
   render(props) {
     return (
-        <Container className="text">
-            <h1>Homes</h1>
+        <Container className="main text">
+            <h1>Homes of Park Ridge</h1>
             <CardColumns>
                 {/* {props.results.map(result => {
                 return ( */}
@@ -38,8 +38,8 @@ export default class Homes extends Component {
                         <CardImg top width="100%" src='../src/assets/101.jpeg' alt='Lot 101' />
                         <CardBody>
                             <CardText className="text">
-                                <strong>Bed: </strong> <br />
-                                <strong>Bath: </strong> <br />                            
+                                <strong>Bed: </strong> 2<br />
+                                <strong>Bath: </strong> 2<br />                            
                             </CardText>
                         </CardBody>
                     </Card>

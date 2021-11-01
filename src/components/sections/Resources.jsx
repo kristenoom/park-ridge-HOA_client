@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 export default class Resources extends Component {
   render() {
     return (
-        <Container className="text">
+        <Container className="main text">
             <h1>Resources</h1>
             <section className="flex-container">
                 <div className="flex-item-left">
