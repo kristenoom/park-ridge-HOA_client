@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600&display=swap");
+/* COLORS 
+gold : #b3995d
+gray : #878787
+green: #8bb25c
+blue: #5c76b2
+*/
 
 /* FONTS */
 .text,
@@ -21,25 +27,6 @@
   font-weight: 400;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 /* BODY CONTENT */
 body {
   background-color: #ffffff;
@@ -57,7 +44,7 @@ body {
   width: 90%;
 }
 .sidebar {
-  background-color: #53565a;
+  background-color: #878787;
   display: flex;
   margin-top: 10px;
 }
@@ -65,6 +52,10 @@ body {
 .flex-container {
   display: flex;
   flex-direction: row;
+}
+
+.flex-container img {
+  max-width: 500px;
 }
 
 .flex-item-left {
@@ -77,10 +68,23 @@ body {
   flex: 33.33333%;
 }
 
+.flex-image-left {
+  flex: 50%;
+  padding: 5px;
+}
+
+.flex-image-right {
+  flex: 50%;
+  padding: 5px;
+}
+
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
+  }
+  .flex-container img {
+    max-width: 400px;
   }
 
   .flex-item-right,
@@ -88,14 +92,19 @@ body {
   .flex-item-left {
     flex: 100%;
   }
+  .flex-image-left,
+  .flex-image-right {
+    flex: 100%;
+  }
 }
 .covenants {
   width: 95%;
   padding-left: 15px;
 }
+
 /* HEADER */
 .header {
-  background-color: #53565a;
+  background-color: #878787;
   color: white;
   margin-top: 0.5em !important;
   text-align: center;
@@ -109,9 +118,20 @@ body {
   margin-top: 0.8em !important;
 }
 
+.companyName {
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
+.companyName img {
+  width: 100px;
+  margin-right: 15px;
+}
+
 /* SIDEBAR */
 .sidebar-list-styling {
-  background-color: #53565a;
+  background-color: #878787;
   color: white;
   font-size: 13px;
   padding-left: 10px;
@@ -134,13 +154,32 @@ ul {
 }
 /*FOOTER */
 footer {
-  background-color: #53565a;
+  background-color: #878787;
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 10px;
 }
 
 footer p {
   margin-top: 0.8em !important;
   margin-left: 1.5em;
+}
+
+/* LINKS */
+a:active {
+  color: white;
+}
+
+a:hover {
+  color: #8bb25c;
+}
+
+a:visited {
+  color: #5c76b2;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
 }

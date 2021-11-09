@@ -5,14 +5,16 @@ import Resources from '../sections/Resources';
 import Arc from '../sections/Arc';
 import Homes from '../sections/Homes';
 import Covenants from '../sections/Covenants';
+import Amenities from '../sections/Amenities';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
         <div className="sidebar">
             <div className="sidebar-list-styling">
                 <ul className="sidebar-list list-styled">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
+                    <li><Link to="/amenities">Amenities</Link></li>
                     <li><Link to="/covenants">Covenants and Bylaws</Link></li>
                     <li><Link to="/arch-review">Architectural Review</Link></li>
                     <li><Link to="/houses">Houses</Link></li>
@@ -24,6 +26,7 @@ const Sidebar = () => {
                 <Switch>
                     <Route exact path="/"><Home /></Route>
                     <Route exact path="/about"><About /></Route>
+                    <Route exact path="/amenities"><Amenities /></Route>
                     <Route exact path="/covenants"><Covenants /></Route>
                     <Route exact path="/arch-review"><Arc /></Route>
                     <Route exact path="/houses"><Homes /></Route>
