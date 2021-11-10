@@ -1,18 +1,23 @@
-import React, {useState} from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import React, {Component} from 'react';
+import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import APIURL from '../helpers/Environment';
 
-const Login = (props) => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: "",
+            passwordhash: ""
+        }
+    }
 
-    const handleSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`https://parkridge-warsaw.herokuapp.com/user/login`, {
-            method: "POST",
+        fetch(APIURL + `/user/login`, {
+            method: 'POST',
             body: JSON.stringify({
                 user: {
-                    username: username, passwordhash: password
+                    username: this.state.username, passwordhash: this.state.passwordhash
                 },
             }),
             headers: new Headers({
@@ -21,26 +26,28 @@ const Login = (props) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                props.updateToken(data.sessionToken);
+                this.state.updateToken(data.sessionToken);
             });
     };
 
-        return(
-            <div>
-                <h1 className="heading">Login</h1>
-                <Form onSubmit={handleSubmit}>
+    render() {
+        return (
+            <Modal>
+                <ModalHeader className="heading">Login</ModalHeader>
+                <ModalBody>
+                <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
-                        <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/>
+                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: this.state.username})} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
-                        <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
+                        <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: this.state.passwordhash})}  />
                     </FormGroup>
-                    <Button type="submit" color="success">Enter</Button>
+                    <Button type="submit" color="success">Sign-In</Button>
                 </Form>
-            </div>
+                </ModalBody>
+            </Modal>
         )
+    }
 }
-
-export default Login;

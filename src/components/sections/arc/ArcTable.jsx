@@ -1,14 +1,14 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
-import APIURL from '../helpers/Environment';
+//import APIURL from '../helpers/Environment';
 
 const ArcTable = (props) => {
     //code is here to allow users to delete if we decide to let users delete requests in the future
-    // const deleteArc = (arc) => {
+    //const deleteArc = (arc) => {
     //     console.log(arc.name);
     //     console.log(props.token);
 
-    //     fetch(`https://parkridge-server.herokuapp.com/arc/${arc.id}`, {
+    //     fetch(APIURL + `/arc/${arc.id}`, {
     //         method: 'DELETE',
     //         headers: new Headers({
     //             'Content-Type': 'application/json',
