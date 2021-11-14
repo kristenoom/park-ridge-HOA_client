@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Option, Button } from 'reactstrap';
 import APIURL from '../helpers/Environment';
 
 export default class Signup extends Component {
@@ -44,6 +44,13 @@ export default class Signup extends Component {
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
                             <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({ passwordhash: this.state.passwordhash })} />
+                        </FormGroup>
+                        <FormGroup>
+                        <Label htmlFor="isAdmin">Are you a board member?</Label>
+                            <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: this.state.IsAdmin })}>
+                            <Option value="false">No</Option>
+                            <Option value="true">Yes</Option>
+                            </Input>
                     </FormGroup>
                     <Button type="submit" color="success">Register</Button>
                 </Form>

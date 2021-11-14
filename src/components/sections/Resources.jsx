@@ -20,6 +20,8 @@ export default class Resources extends Component {
                     <p>NIPSCO<br />xxx-xxx-xxxx</p>
                     <p>Indiana American Water<br />xxx-xxx-xxxx</p>
                     <p>Warsaw Wastewater<br />xxx-xxx-xxxx</p>
+                    <p>Indiana 811<br />
+                    Dial 811</p>
                 </div>
                 <div className="flex-item-right">
                     <h3>Community</h3>
