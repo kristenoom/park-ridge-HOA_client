@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import APIURL from '../helpers/Environment';
 
 export default class ArcEdit extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ export default class ArcEdit extends Component {
 
     arcUpdate = (e, arc) => {
         e.preventDefault();
-        fetch(APIURL + `/arc/${this.state.arcToUpdate.id}`, {
+        fetch(`https://parkridge-server.herokuapp.com/arc/${this.state.arcToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 name: this.state.name,

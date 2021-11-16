@@ -2,7 +2,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 import Home from './Home';
 import About from '../sections/About';
 import Resources from '../sections/Resources';
-import Arc from '../sections/Arc';
+import Arc from '../sections/arc/Arc';
 import Homes from '../sections/Homes';
 import Covenants from '../sections/Covenants';
 import Amenities from '../sections/Amenities';

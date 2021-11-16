@@ -2,23 +2,7 @@ import React, { Component } from 'react'
 import { Container, CardColumns, Card, CardBody, CardImg, CardTitle, CardText } from 'reactstrap';
 
 export default class Homes extends Component {
-    // const [results, setResults] = useState([]);
-    
-    // const fetchResults = async () => {
-    //     const response = await fetch(url);
-    //     const data = await response.json();
-    //     console.log(data.results);
-    //     setResults(data.results);
-    // };
 
-    // useEffect(() => {
-    //     fetchResults();
-    // }, []);
-    
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     fetchResults();
-    // };
   render(props) {
     return (
         <Container className="main text">

@@ -6,9 +6,12 @@ export default class About extends Component {
     return (
         <Container className="main text">
             <h1>About</h1>
-            Established in XXXX. Park Ridge is a community of 134 single-family homes built by Granite Ridge. All single-family homes feature a 2- or 3-car garage with plenty of living and storage space.
+            Established in 2010. Park Ridge is a community of 134 single-family homes built by Granite Ridge. All single-family homes feature a 2- or 3-car garage with plenty of living and storage space.
                 <h4>Where are we located?</h4>
             <p>Our community is located south of Downtown Warsaw, just off of Rt. 15 via County Farm Road. Park Ridge Church is located at our entrance.</p>
+            <h5>Directions:</h5>
+            <p>From Fort Wayne: Take US-30 into Warsaw. Turn left at Center Street. Turn left onto Detroit Street/HWY-15. Follow signs for HWY-15. Veer to the left onto Ranch Road (Red Horse Bait Shop on corner). Go down the road, and Park Ridge is just over a mile on the right.</p>
+                <br />
             <h4>Board of Directors</h4>
             <CardColumns>
                 <Row>

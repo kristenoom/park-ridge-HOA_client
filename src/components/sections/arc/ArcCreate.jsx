@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, FormGroup, Label, Input, Button } from 'reactstrap';
-import APIURL from '../helpers/Environment';
 
 export default class ArcCreate extends Component {
     constructor(props) {
@@ -14,7 +13,7 @@ export default class ArcCreate extends Component {
         
         this.state.handleSubmit = (e) => {
             e.preventDefault();
-            fetch(APIURL + `/arc/create`, {
+            fetch(`https://parkridge-server.herokuapp.com/arc/create`, {
                 method: 'POST',
                 body: JSON.stringify({
                     name: this.state.name,

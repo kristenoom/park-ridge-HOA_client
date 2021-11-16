@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import ArcCreate from './ArcCreate';
 import ArcEdit from './ArcEdit';
 import ArcTable from './ArcTable';
-import APIURL from '../helpers/Environment';
 
 export default class Arc extends Component {
     constructor(props) {
@@ -19,7 +18,7 @@ export default class Arc extends Component {
             e.preventDefault();
             let sessionToken = localStorage.getItem('token');
             console.log(sessionToken);
-            fetch(APIURL + `/arc/create`, {
+            fetch(`https://parkridge-server.herokuapp.com/arc/create`, {
                 method: 'GET',
                 body: JSON.stringify({
                     name: this.state.name,
@@ -39,10 +38,6 @@ export default class Arc extends Component {
                     console.log(arcData)
                 })
         };
-
-        // useEffect(() => {
-        //     fetchArcRequest();
-        // }, []);
 
         this.setState(() => {
             this.state.fetchArcRequest();

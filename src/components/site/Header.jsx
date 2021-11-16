@@ -13,12 +13,12 @@ const Header = (props) => {
                 <Nav className="companyName">Park Ridge Community Association</Nav>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        {/* <Link to="/register">Register</Link>
+                        <Link to="/register">Register</Link>
                         <Link to="/login">Login</Link>
                         <Switch>
                             <Route exact path="/register"><Signup token={props.token} /></Route>
                             <Route exact path="/login"><Login token={props.token} /></Route>
-                        </Switch> */}
+                        </Switch>
                     </NavItem>
                 </Nav>
             </Navbar>
