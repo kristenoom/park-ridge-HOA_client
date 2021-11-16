@@ -1,27 +1,21 @@
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from "./components/Sidebar.jsx";
-import About from "./components/About.jsx";
-import Amenities from "./components/Amenities.jsx";
-import Arc from "./components/Arc.jsx";
-import Homes from "./components/Homes.jsx";
-import Resources from "./components/Resources.jsx";
+import Header from "./components/site/Header.jsx";
+import Sidebar from "./components/site/Sidebar.jsx";
+import Footer from "./components/site/Footer.jsx";
+import { BrowserRouter as Router, } from 'react-router-dom';
 
-function App() {
-  return (
-      <div id="colorlib-page">
-          <div id="container-wrap">
-              <Sidebar />
-          </div>
-          <div id="colorlib-main">
-              <About />
-              <Amenities />
-              <Arc />
-              <Homes />
-              <Resources />
-          </div>
-    </div>
-  );
-}
-
+const App = () => {
+    return (
+        <div>
+          <Header />
+          <Router>
+            <Sidebar />
+          </Router>
+          <Footer />
+        </div>
+      );
+    };
+    
 export default App;
