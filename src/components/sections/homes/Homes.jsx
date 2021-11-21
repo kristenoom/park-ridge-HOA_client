@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, CardColumns, Card, CardBody, CardImg, CardTitle, CardText } from 'reactstrap';
+import { Container, Row, Col, CardColumns } from 'reactstrap';
 
 import HomesCreate from './HomesCreate';
 import HomesEdit from './HomesEdit';
