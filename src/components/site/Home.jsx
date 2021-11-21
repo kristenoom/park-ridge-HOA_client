@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <Container className="main text">
             <h1>Welcome to Park Ridge of Warsaw</h1>
-            <p>This quiet homeowners association was created in XXXX and hosts 134 homes. It is nestled off of Ranch Road just South of Downtown Warsaw.</p>
+            <p>This quiet homeowners association was created in 2010 and hosts 134 homes. It is nestled off of Ranch Road just South of Downtown Warsaw.</p>
             <p><strong>Neighborhood Information:</strong><br />
                 HOA Fees: $175 annually
             </p>

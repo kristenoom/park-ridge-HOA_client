@@ -3,7 +3,8 @@ import Home from './Home';
 import About from '../sections/About';
 import Resources from '../sections/Resources';
 import Arc from '../sections/arc/Arc';
-import Homes from '../sections/Homes';
+import Homes from '../sections/homes/Homes';
+import Blog from '../sections/blog/Blog';
 import Covenants from '../sections/Covenants';
 import Amenities from '../sections/Amenities';
 
@@ -18,8 +19,8 @@ const Sidebar = (props) => {
                     <li><Link to="/covenants">Covenants and Bylaws</Link></li>
                     <li><Link to="/arch-review">Architectural Review</Link></li>
                     <li><Link to="/houses">Houses</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
                     <li><Link to="/resources">Resources</Link></li>
-                    {/* <li><Link to="/blog">Blog</Link></li> */}
                 </ul>
             </div>
             <div className="sidebar-route">
@@ -30,6 +31,7 @@ const Sidebar = (props) => {
                     <Route exact path="/covenants"><Covenants /></Route>
                     <Route exact path="/arch-review"><Arc /></Route>
                     <Route exact path="/houses"><Homes /></Route>
+                    <Route exact path="/blog"><Blog /></Route>
                     <Route exact path="/resources"><Resources /></Route>
                 </Switch>
             </div>
