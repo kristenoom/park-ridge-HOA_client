@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 export default class Signup extends Component {
     constructor(props) {
@@ -7,19 +7,11 @@ export default class Signup extends Component {
         this.state = {
             username: "",
             passwordhash: "",
-            showModal: false
+            IsAdmin: false,
+            sessionToken: "",
+            updateToken: ""
         };
 
-        this.handleOpenModal = this.handleOpenModal.bind(this);
-        this.handleCloseModal = this.handleCloseModal.bind(this);
-    }
-
-    handleOpenModal() {
-        this.setState({ showModal: true });
-    }
-
-    handleCloseModal() {
-        this.setState({ showModal: false });
     }
  
     handleSubmit = (e) => {
@@ -30,6 +22,8 @@ export default class Signup extends Component {
                 user: {
                     username: this.state.username,
                     passwordhash: this.state.passwordhash,
+                    IsAdmin: this.state.IsAdmin
+                    
                 },
             }),
             headers: new Headers({
@@ -45,8 +39,7 @@ export default class Signup extends Component {
     render() {
         return (
             <>
-                <ModalHeader className="heading">Sign Up</ModalHeader>
-                <ModalBody>
+                <h1 className="heading">Sign Up</h1>
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup>
                         <Label htmlFor="username">Username</Label>
@@ -65,7 +58,6 @@ export default class Signup extends Component {
                     </FormGroup>
                     <Button type="submit" color="success">Register</Button>
                 </Form>
-                </ModalBody>
             </>
         )
     }

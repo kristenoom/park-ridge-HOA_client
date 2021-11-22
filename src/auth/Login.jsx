@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 //import Modal from 'react-modal';
 
 export default class Login extends Component {
@@ -8,8 +8,7 @@ export default class Login extends Component {
         this.state = {
             username: "",
             passwordhash: "",
-            modalIsOpen: false,
-            setIsOpen: true
+            updateToken: ""
         }
     }
 
@@ -19,7 +18,9 @@ export default class Login extends Component {
             method: 'POST',
             body: JSON.stringify({
                 user: {
-                    username: this.state.username, passwordhash: this.state.passwordhash
+                    username: this.state.username, passwordhash: this.state.passwordhash,
+                    updateToken: "",
+                    sessionToken: ""
                 },
             }),
             headers: new Headers({
@@ -29,16 +30,13 @@ export default class Login extends Component {
             .then((response) => response.json())
             .then((data) => {
                 this.state.updateToken(data.sessionToken);
-                this.state.modalIsOpen(true);
-                this.state.setIsOpen(false);
             });
     };
 
     render() {
         return (
             <>
-                <ModalHeader className="heading">Login</ModalHeader>
-                <ModalBody>
+                <h1 className="heading">Login</h1>
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
@@ -48,9 +46,8 @@ export default class Login extends Component {
                         <Label htmlFor="password">Password</Label>
                         <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: this.state.passwordhash})}  />
                     </FormGroup>
-                    <Button type="submit" color="success">Sign-In</Button>
+                    <Button type="submit" color="success">Sign In</Button>
                 </Form>
-                </ModalBody>
             </>
         )
     }
