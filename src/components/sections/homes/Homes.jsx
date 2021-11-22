@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, CardColumns } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import HomesCreate from './HomesCreate';
 import HomesEdit from './HomesEdit';
@@ -74,9 +74,7 @@ export default class Homes extends Component {
             </Row>
             <Row>
                 <Col>
-                    <CardColumns>
-                        <HomesTable homes={this.state.homes} updateHomes={this.state.updateHomes} updateOn={this.state.updateOn} fetchHomesRequest={this.state.fetchHomesRequest} sessionToken={this.state.sessionToken} />
-                    </CardColumns>
+                    <HomesTable homes={this.state.homes} updateHomes={this.state.updateHomes} updateOn={this.state.updateOn} fetchHomesRequest={this.state.fetchHomesRequest} sessionToken={this.state.sessionToken} />
                 </Col>
             </Row>
             <Row>

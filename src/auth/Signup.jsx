@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
-import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-import APIURL from '../helpers/Environment';
+import { ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 export default class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
             username: "",
-            passwordhash: ""
-        }
+            passwordhash: "",
+            showModal: false
+        };
+
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+
+    handleOpenModal() {
+        this.setState({ showModal: true });
+    }
+
+    handleCloseModal() {
+        this.setState({ showModal: false });
     }
  
     handleSubmit = (e) => {
         e.preventDefault();
-        fetch(APIURL + `/user/register`, {
+        fetch(`https://parkridge-server.herokuapp.com/user/register`, {
             method: 'POST',
             body: JSON.stringify({
                 user: {
@@ -33,7 +44,7 @@ export default class Signup extends Component {
 
     render() {
         return (
-            <Modal>
+            <>
                 <ModalHeader className="heading">Sign Up</ModalHeader>
                 <ModalBody>
                 <Form onSubmit={this.state.handleSubmit}>
@@ -55,7 +66,7 @@ export default class Signup extends Component {
                     <Button type="submit" color="success">Register</Button>
                 </Form>
                 </ModalBody>
-            </Modal>
+            </>
         )
     }
 }

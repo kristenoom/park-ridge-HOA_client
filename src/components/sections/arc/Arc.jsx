@@ -11,7 +11,8 @@ export default class Arc extends Component {
             arc: "",
             updateArc: "",
             arcToUpdate: "",
-            sessionToken: ""
+            sessionToken: "",
+            fetchArcRequest: ""
         }
     
         this.state.fetchArcRequest = (e) => {

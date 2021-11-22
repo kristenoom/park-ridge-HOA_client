@@ -6,8 +6,8 @@ export default class About extends Component {
     return (
         <Container className="main text">
             <h1>About</h1>
-            Established in 2010. Park Ridge is a community of 134 single-family homes built by Granite Ridge. All single-family homes feature a 2- or 3-car garage with plenty of living and storage space.
-                <h4>Where are we located?</h4>
+            Established in 2007. Park Ridge is a community of 134 single-family homes built by Granite Ridge. All single-family homes feature a 2- or 3-car garage with plenty of living and storage space.
+            <h4>Where are we located?</h4>
             <p>Our community is located south of Downtown Warsaw, just off of Rt. 15 via County Farm Road. Park Ridge Church is located at our entrance.</p>
             <h5>Directions:</h5>
             <p>From Fort Wayne: Take US-30 into Warsaw. Turn left at Center Street. Turn left onto Detroit Street/HWY-15. Follow signs for HWY-15. Veer to the left onto Ranch Road (Red Horse Bait Shop on corner). Go down the road, and Park Ridge is just over a mile on the right.</p>
@@ -22,7 +22,7 @@ export default class About extends Component {
                                 <strong className="text-muted">President</strong>
                             </CardTitle>
                         </CardBody>
-                        <CardImg top width="100%" src='./assets/president.png' alt='President' />
+                        <CardImg top width="100%" src='./assets/president.jpeg' alt='President' />
                         <CardBody>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">
                                 <strong>Kristen Oom</strong>
@@ -53,13 +53,13 @@ export default class About extends Component {
                                 <strong className="text-muted">Vice President</strong>
                             </CardTitle>
                         </CardBody>
-                        <CardImg top width="100%" src='./assets/vpresident.png' alt='Vice President' />
+                        <CardImg top width="100%" src='./assets/vpresident.jpeg' alt='Vice President' />
                         <CardBody>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">
                                 <strong>Roberto Perez-de-Frias</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                                Resident Since 20XX<br />          
+                                Resident Since 2017<br />          
                             </CardText>
                         </CardBody>
                         </Card>
@@ -77,7 +77,7 @@ export default class About extends Component {
                                 <strong>Zach Tingle</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                                Resident Since 20XX<br />          
+                                Resident Since 2020<br />          
                             </CardText>
                         </CardBody>
                         </Card>
@@ -89,7 +89,7 @@ export default class About extends Component {
                                 <strong className="text-muted">Secretary</strong>
                             </CardTitle>
                         </CardBody>
-                        <CardImg top width="100%" src='./assets/secretary.png' alt='Secretary' />
+                        <CardImg top width="100%" src='./assets/secretary.jpeg' alt='Secretary' />
                         <CardBody>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">
                                 <strong>Lauren</strong>
@@ -115,7 +115,7 @@ export default class About extends Component {
                                 <strong>Aaron Gaff</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                                Resident Since 20xx<br />
+                                Resident Since 2013<br />
                                 Architectural Control Committee<br />
                             <em>Former President</em>
                             </CardText>
@@ -135,7 +135,7 @@ export default class About extends Component {
                                 <strong>Rob Barker</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                            Resident Since 20xx<br />
+                            Resident Since 2013<br />
                             Architectural Control Committee
                             </CardText>
                         </CardBody>
@@ -154,7 +154,7 @@ export default class About extends Component {
                                 <strong>Sharon Brown</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                            Resident Since 20xx<br />
+                            Resident Since 2018<br />
                             </CardText>
                         </CardBody>
                     </Card>
@@ -172,7 +172,7 @@ export default class About extends Component {
                                 <strong>Cindy Shoemaker</strong>
                             </CardSubtitle>
                             <CardText className="text">
-                            Resident Since 20xx<br />
+                            Resident Since 2008<br />
                             </CardText>
                         </CardBody>
                     </Card>

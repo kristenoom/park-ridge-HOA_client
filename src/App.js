@@ -4,18 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/site/Header.jsx";
 import Sidebar from "./components/site/Sidebar.jsx";
 import Footer from "./components/site/Footer.jsx";
-import { BrowserRouter as Router, } from 'react-router-dom';
+
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
+
     return (
         <div>
-          <Header />
-          <Router>
+            <BrowserRouter>
+            <Header />
             <Sidebar />
-          </Router>
-          <Footer />
+            <Footer />
+            </BrowserRouter>
         </div>
-      );
-    };
+    );
+};
     
 export default App;

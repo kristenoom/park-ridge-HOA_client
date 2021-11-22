@@ -18,23 +18,19 @@ const BlogTable = (props) => {
          .then(() => this.props.fetchBlogRequest())
     }
 
-    const blogMapper = () => {
-        return props.blogs.map((blog, index) => {
-            return (
-                <tr key={index} className="text">
-                    <td>{blog.id}</td>
-                    <td>{blog.name}</td>
-                    <td>{blog.address}</td>
-                    <td>{blog.document1}</td>
-                    <td>{blog.document2}</td>
-                    <td>
-                        <Button color="warning" onClick={() => { props.editUpdateBlog(blog); props.updateOn() }}>Update</Button>
+    const blogMapper = props.blog.map((blog, index) =>
+        <tr key={index} className="text">
+            <td>{blog.id}</td>
+            <td>{blog.name}</td>
+            <td>{blog.address}</td>
+            <td>{blog.document1}</td>
+            <td>{blog.document2}</td>
+            <td>
+                <Button color="warning" onClick={() => { props.editUpdateBlog(blog); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteBlog(blog) }}>Delete &ndash;</Button>
                     </td>
                 </tr>
-            )
-        })
-    }
+    )
     
     return(
         <Table striped>
