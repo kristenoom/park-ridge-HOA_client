@@ -35,7 +35,8 @@ export default class Login extends Component {
 
     render() {
         return (
-            <>
+            <div style={{backgroundColor: "white"}}>
+                <br />
                 <h1 className="heading">Login</h1>
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
@@ -48,7 +49,8 @@ export default class Login extends Component {
                     </FormGroup>
                     <Button type="submit" color="success">Sign In</Button>
                 </Form>
-            </>
+                <br />
+            </div>
         )
     }
 }

@@ -38,7 +38,8 @@ export default class Signup extends Component {
 
     render() {
         return (
-            <>
+            <div style={{backgroundColor: "white"}}>
+                <br />
                 <h1 className="heading">Sign Up</h1>
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup>
@@ -58,7 +59,8 @@ export default class Signup extends Component {
                     </FormGroup>
                     <Button type="submit" color="success">Register</Button>
                 </Form>
-            </>
+                <br />
+            </div>
         )
     }
 }
