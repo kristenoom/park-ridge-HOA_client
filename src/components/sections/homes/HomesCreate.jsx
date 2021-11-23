@@ -10,7 +10,8 @@ export default class HomesCreate extends Component {
             bedroom: "",
             bathroom: "",
             garage: "",
-            acreage: ""
+            acreage: "",
+            handleSubmit: ""
         }
         
         this.state.handleSubmit = (e) => {
@@ -49,20 +50,41 @@ export default class HomesCreate extends Component {
         return (
             <Container className="main text">
                 <FormGroup>
-                    <Label htmlForm='address' value={this.state.address} onChange={(e) => this.setState({ address: this.state.address })} />
-                    <Input type="text" name="address" />
-                    <Label htmlForm='squareFootage' value={this.state.squareFootage} onChange={(e) => this.setState({ squareFootage: this.state.squareFootage })} />
-                    <Input type="text" name="squareFootage" />
-                    <Label htmlForm='bedroom' value={this.state.bedroom} onChange={(e) => this.setState({ bedroom: this.state.bedroom })} />
-                    <Input type="text" name="bedroom" placeholder='bedroom' />
-                    <Label htmlForm='bathroom' value={this.state.bathroom} onChange={(e) => this.setState({ bathroom: this.state.bathroom })} />
-                    <Input type="text" name="bathroom" placeholder='bathroom' />
-                    <Label htmlForm='garage' value={this.state.garage} onChange={(e) => this.setState({ garage: this.state.garage })} />
-                    <Input type="text" name="garage" placeholder='garage' />
-                    <Label htmlForm='squareFootage' value={this.state.squareFootage} onChange={(e) => this.setState({ squareFootage: this.state.squareFootage })} />
-                    <Input type="text" name="squareFootage" placeholder='squareFootage' />
+                    {/* ADDRESS */}
+                        <Label htmlForm="address">Address:</Label>
+                        <Input type="text" placeholder="enter address here" name="address" htmlForm='address' value={this.state.address} onChange={(e) => this.setState({ address: e.target.value })} style={{maxWidth: "500px"}}/>
+                        </FormGroup>
+                        <FormGroup>
+                    {/* SQ FOOTAGE */}
+                        <Label htmlForm="squareFootage">Sq Ft:</Label>
+                        <Input type="text" placeholder="square footage" name="squareFootage" htmlForm="squareFootage" value={this.state.squareFootage} onChange={(e) => this.setState({squareFootage: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
+                        <FormGroup>
+                    {/* BEDROOMS */}
+                        <Label htmlForm='bedroom'>Bedrooms:</Label>
+                        <Input type="text" placeholder="enter # of bedrooms" name="bedroom" value={this.state.bedroom} onChange={(e) => this.setState({bedroom: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
+                        <FormGroup>
+                    {/* BATHROOMS */}
+                        <Label htmlForm='bathroom'>Bathrooms:</Label>
+                        <Input type="text" placeholder="enter # of bathrooms" name="bathroom" value={this.state.bathroom} onChange={(e) => this.setState({bathroom: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
+                        <FormGroup>
+                    {/* GARAGES */}
+                        <Label htmlForm='garage'>Garage:</Label>
+                        <Input type="text" placeholder="enter # of garage spaces" name="garage" value={this.state.garage} onChange={(e) => this.setState({garage: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
+                        <FormGroup>
+                    {/* GARAGES */}
+                        <Label htmlForm='garage'>Garage:</Label>
+                        <Input type="text" placeholder="enter # of garage spaces" name="garage" value={this.state.garage} onChange={(e) => this.setState({garage: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
+                        <FormGroup>
+                    {/* ACREAGES */}
+                        <Label htmlForm='acreage'>Acreage:</Label>
+                        <Input type="text" placeholder="enter acreage" name="acreage" value={this.state.acreage} onChange={(e) => this.setState({acreage: e.target.value})} style={{maxWidth: "500px"}} />
+                        </FormGroup>
                     <br />
-                </FormGroup>
                 <Button type="submit" color="success">Submit</Button>
             </Container>
         )

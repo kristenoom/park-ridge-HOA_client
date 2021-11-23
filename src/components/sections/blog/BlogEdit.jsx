@@ -22,6 +22,7 @@ export default class BlogEdit extends Component {
                 title: this.state.title,
                 content: this.state.content,
                 keywords: this.state.keywords,
+                fetchBlogRequest: this.state.fetchBlogRequest
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -40,17 +41,21 @@ export default class BlogEdit extends Component {
                 <ModalBody>
                     <Form onSubmit={this.state.blogToUpdate}>
                         <FormGroup>
-                            <Label htmlForm="title">Title:</Label>
-                            <Input name="title" value={this.state.title} onChange={(e) => this.setState({ title: this.state.title })} />
+                    {/* TITLE OF ARTICLE */}
+                        <Label htmlFor="title">Title of Article:</Label>
+                        <Input type="text" placeholder="enter article title here" name="title" htmlForm='title' value={this.state.title} onChange={(e) => this.setState({ title: e.target.value })} style={{maxWidth: "500px"}}/>
                         </FormGroup>
                         <FormGroup>
-                            <Label htmlForm="content">Address:</Label>
-                            <Input name="content" value={this.state.content} onChange={(e) => this.setState({ content: this.state.content })} />
+                    {/* CONTENT */}
+                        <Label htmlForm="content">Body of Article:</Label>
+                        <Input type="text" placeholder="content" name="content" htmlForm="content" value={this.state.content} onChange={(e) => this.setState({content: e.target.value})} style={{maxWidth: "500px", maxHeight: "750px"}} />
                         </FormGroup>
                         <FormGroup>
-                            <Label htmlForm="keywords">Document 1:</Label>
-                            <Input name="keywords" value={this.state.keywords} onChange={(e) => this.setState({ keywords: this.state.keywords })} />
+                    {/* KEYWORDS */}
+                        <Label htmlForm='keywords'>Keywords:</Label>
+                        <Input type="text" placeholder="enter keywords here" name="keywords" value={this.state.keywords} onChange={(e) => this.setState({keywords: e.target.value})} style={{maxWidth: "500px"}} />
                         </FormGroup>
+                        <br />
                         <Button type="submit" color="success">Update</Button>
                     </Form>
                 </ModalBody>

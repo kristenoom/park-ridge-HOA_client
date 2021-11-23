@@ -21,10 +21,9 @@ const BlogTable = (props) => {
     const blogMapper = props.blog.map((blog, index) =>
         <tr key={index} className="text">
             <td>{blog.id}</td>
-            <td>{blog.name}</td>
-            <td>{blog.address}</td>
-            <td>{blog.document1}</td>
-            <td>{blog.document2}</td>
+            <td>{blog.title}</td>
+            <td>{blog.content}</td>
+            <td>{blog.keywords}</td>
             <td>
                 <Button color="warning" onClick={() => { props.editUpdateBlog(blog); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteBlog(blog) }}>Delete &ndash;</Button>
@@ -37,10 +36,9 @@ const BlogTable = (props) => {
             <thread>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Document 1</th>
-                    <th>Document 2</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Keywords</th>
                 </tr>
             </thread>
             <tbody>

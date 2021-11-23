@@ -7,7 +7,8 @@ export default class BlogCreate extends Component {
         this.state = {
             title: "",
             content: "",
-            keywords: ""
+            keywords: "",
+            handleSubmit: ""
         }
         
         this.state.handleSubmit = (e) => {
@@ -40,15 +41,19 @@ export default class BlogCreate extends Component {
         return (
             <Container className="main text">
                 <FormGroup>
-                    <Label htmlForm='title' value={this.state.title} onChange={(e) => this.setState({ title: this.state.title })} />
-                    <Input type="text" name="title" />
-                    <Label htmlForm='content' value={this.state.content} onChange={(e) => this.setState({ content: this.state.content })} />
-                    <Input type="text" name="content" />
-                    <Label htmlForm='keywords' value={this.state.keywords} onChange={(e) => this.setState({ keywords: this.state.keywords })} />
-                    <Input type="text" name="keywords" placeholder='keywords' />
+                {/* TITLE OF ARTICLE */}
+                    <Label htmlFor="title">Title of Article:</Label>
+                    <Input type="text" placeholder="enter article title here" name="title" htmlForm='title' value={this.state.title} onChange={(e) => this.setState({ title: e.target.value })} style={{maxWidth: "500px"}}/>
+                {/* CONTENT */}
+                    <Label htmlForm="content">Body of Article:</Label>
+                    <Input type="text" placeholder="content" name="content" htmlForm="content" value={this.state.content} onChange={(e) => this.setState({content: e.target.value})} style={{maxWidth: "500px", maxHeight: "750px"}} />
+                {/* KEYWORDS */}
+                    <Label htmlForm='keywords'>Keywords:</Label>
+                    <Input type="text" placeholder="enter keywords here" name="keywords" value={this.state.keywords} onChange={(e) => this.setState({keywords: e.target.value})} style={{maxWidth: "500px"}} />
                     <br />
                 </FormGroup>
                 <Button type="submit" color="success">Submit</Button>
+                <br />
             </Container>
         )
     }
