@@ -44,15 +44,15 @@ export default class Signup extends Component {
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup>
                         <Label htmlFor="username">Username</Label>
-                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: this.state.username})} />
+                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
-                            <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({ passwordhash: this.state.passwordhash })} />
+                            <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({ passwordhash: e.target.value })} />
                         </FormGroup>
                         <FormGroup check>
                         <Label htmlFor="isAdmin">Are you a board member?</Label>
-                            <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: this.state.IsAdmin })}>
+                            <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: e.target.value })}>
                             <option value="false">No</option>
                             <option value="true">Yes</option>
                             </Input>

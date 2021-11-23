@@ -41,11 +41,11 @@ export default class Login extends Component {
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
-                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: this.state.username})} />
+                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
-                        <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: this.state.passwordhash})}  />
+                        <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: e.target.value})}  />
                     </FormGroup>
                     <Button type="submit" color="success">Sign In</Button>
                 </Form>
