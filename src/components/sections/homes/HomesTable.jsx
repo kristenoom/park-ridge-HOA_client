@@ -7,21 +7,21 @@ const HomesTable = (props) => {
     const homesMapper = () => {
         return props.homess.map((homes, index) => {
             return (
-                <Card key={index} style={{ width: "300px" }}>
+                <Card key={index.id} style={{ width: "300px" }}>
                     <CardBody>
                         <CardTitle tag="h5" className="text">
-                            <strong className="text-muted">{homes.address}</strong>
+                            <strong className="text-muted">{props.homes.address}</strong>
                         </CardTitle>
                         {/* <CardSubtitle tag="h6" className="mb-2 text-muted"><strong></strong></CardSubtitle> */}
                     </CardBody>
                     {/* <CardImg top width="100%" src='../src/assets/101.jpeg' alt='Lot 101' /> */}
                     <CardBody>
                         <CardText className="text">
-                            <strong>Bed: </strong> {homes.bedroom}<br />
-                            <strong>Bath: </strong> {homes.bathroom}<br />
-                            <strong>Garage:</strong> {homes.garage}<br />
-                            <strong>Square Footage:</strong> {homes.squareFootage}<br />
-                            <strong>Acreage:</strong> {homes.acreage}<br />
+                            <strong>Bed: </strong> {props.homes.bedroom}<br />
+                            <strong>Bath: </strong> {props.homes.bathroom}<br />
+                            <strong>Garage:</strong> {props.homes.garage}<br />
+                            <strong>Square Footage:</strong> {props.homes.squareFootage}<br />
+                            <strong>Acreage:</strong> {props.homes.acreage}<br />
                         </CardText>
                     </CardBody>
                     <Button color="warning" onClick={() => { props.editUpdateHomes(homes); props.updateOn() }}>Update</Button>

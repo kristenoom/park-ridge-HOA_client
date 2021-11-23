@@ -20,6 +20,8 @@ export default class Signup extends Component {
             method: 'POST',
             body: JSON.stringify({
                 user: {
+                    name: this.state.name,
+                    address: this.state.address,
                     username: this.state.username,
                     passwordhash: this.state.passwordhash,
                     IsAdmin: this.state.IsAdmin
@@ -42,6 +44,14 @@ export default class Signup extends Component {
                 <br />
                 <h1 className="heading">Sign Up</h1>
                 <Form onSubmit={this.state.handleSubmit}>
+                <FormGroup>
+                        <Label htmlFor="name">Full Name</Label>
+                            <Input name="name" value={this.state.name} onChange={(e) => this.setState({name: e.target.value})} style={{maxWidth: "300px"}}/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label htmlFor="address">Street Address</Label>
+                            <Input name="address" value={this.state.address} onChange={(e) => this.setState({address: e.target.value})} style={{maxWidth: "300px"}}/>
+                    </FormGroup>
                     <FormGroup>
                         <Label htmlFor="username">Username</Label>
                             <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} style={{maxWidth: "300px"}}/>
@@ -53,8 +63,8 @@ export default class Signup extends Component {
                         <FormGroup check>
                         <Label htmlFor="isAdmin">Are you a board member?</Label>
                             <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: e.target.value })}>
-                            <option value="false">No</option>
                             <option value="true">Yes</option>
+                            <option value="false">No</option>
                             </Input>
                     </FormGroup>
                     <Button type="submit" color="success">Register</Button>
