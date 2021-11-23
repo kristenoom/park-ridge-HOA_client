@@ -35,17 +35,17 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div style={{backgroundColor: "white"}}>
+            <div style={{ backgroundColor: "white", padding: "20px"}}>
                 <br />
                 <h1 className="heading">Login</h1>
                 <Form onSubmit={this.state.handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
-                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} />
+                            <Input name="username" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} style={{maxWidth: "300px"}} />
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
-                        <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: e.target.value})}  />
+                        <Input name="password" value={this.state.passwordhash} onChange={(e) => this.setState({passwordhash: e.target.value})} style={{maxWidth: "300px"}} />
                     </FormGroup>
                     <Button type="submit" color="success">Sign In</Button>
                 </Form>
