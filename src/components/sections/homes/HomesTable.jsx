@@ -10,7 +10,7 @@ const HomesTable = (props) => {
                 <Card key={index} style={{ width: "300px" }}>
                     <CardBody>
                         <CardTitle tag="h5" className="text">
-                            <strong className="text-muted">Insert Address Here</strong>
+                            <strong className="text-muted">{homes.address}</strong>
                         </CardTitle>
                         {/* <CardSubtitle tag="h6" className="mb-2 text-muted"><strong></strong></CardSubtitle> */}
                     </CardBody>
