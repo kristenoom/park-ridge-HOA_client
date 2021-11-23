@@ -5,7 +5,7 @@ import { Table, Button } from 'reactstrap';
 const BlogTable = (props) => {
 
     const blogMapper = () => {
-        return props.blog.map((blog, index) => {
+        return props.blogs.map((blog, index) => {
             return (
                 <tr key={index} className="text">
                     <td>{blog.id}</td>

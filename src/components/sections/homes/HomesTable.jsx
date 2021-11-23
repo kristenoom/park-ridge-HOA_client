@@ -5,7 +5,7 @@ import { CardColumns, Card, CardBody, CardTitle, CardText, Button } from 'reacts
 const HomesTable = (props) => {
 
     const homesMapper = () => {
-        return props.homes.map((homes, index) => {
+        return props.homess.map((homes, index) => {
             return (
                 <Card key={index} style={{ width: "300px" }}>
                     <CardBody>
