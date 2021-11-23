@@ -3,12 +3,13 @@ import { Container, Row, Col } from 'reactstrap';
 
 import HomesCreate from './HomesCreate';
 import HomesEdit from './HomesEdit';
-import HomesTable from './HomesTable';
+//import HomesTable from './HomesTable';
 
 export default class Homes extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            homes: '',
             address: "",
             squareFootage: "",
             bedroom: "",
@@ -17,7 +18,7 @@ export default class Homes extends Component {
             acreage: "",
             sessionToken: ""
         }
-
+        
     this.state.fetchHomesRequest = (e) => {
         e.preventDefault();
         let sessionToken = localStorage.getItem('token');
@@ -40,7 +41,15 @@ export default class Homes extends Component {
         })
             .then((res) => res.json())
             .then((homesData) => {
-                this.state.homes(homesData)
+                this.setState({
+                    homes: [],
+                    address: e.target.value,
+                    squareFootage: e.target.value,
+                    bedroom: e.target.value,
+                    bathroom: e.target.value,
+                    garage: e.target.value,
+                    acreage: e.target.value
+                 })
                 console.log(homesData)
             })
     };
@@ -72,11 +81,11 @@ export default class Homes extends Component {
                     <HomesCreate fetchHomesRequest={this.state.fetchHomesRequest} sessionToken={this.state.sessionToken} />
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <Col>
                     <HomesTable homes={this.state.homes} updateHomes={this.state.updateHomes} updateOn={this.state.updateOn} fetchHomesRequest={this.state.fetchHomesRequest} sessionToken={this.state.sessionToken} />
                 </Col>
-            </Row>
+            </Row> */}
             <Row>
                 <Col>
                     {this.state.updateActive ? <HomesEdit homesToUpdate={this.state.homesToUpdate} updateOff={this.state.updateOff} sessionToken={this.state.sessionToken} fetchHomesRequest={this.state.fetchHomesRequest} /> : <></>}

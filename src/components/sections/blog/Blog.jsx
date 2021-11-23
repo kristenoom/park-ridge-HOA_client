@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import BlogCreate from './BlogCreate';
 import BlogEdit from './BlogEdit';
-import BlogTable from './BlogTable';
+//import BlogTable from './BlogTable';
 
 export default class Blog extends Component {
     constructor(props) {
@@ -70,9 +70,9 @@ export default class Blog extends Component {
                 </Col>
             </Row>
             <Row>
-                <Col>
+                {/* <Col>
                     <BlogTable blog={this.state.blog} updateBlog={this.state.updateBlog} updateOn={this.state.updateOn} fetchBlogRequest={this.state.fetchBlogRequest} sessionToken={this.state.sessionToken} />
-                </Col>
+                </Col> */}
                 {this.state.updateActive ? <BlogEdit blogToUpdate={this.state.blogToUpdate} updateOff={this.state.updateOff} sessionToken={this.state.sessionToken} fetchBlogRequest={this.state.fetchBlogRequest} /> : <></>}        
             </Row>    
         </Container>

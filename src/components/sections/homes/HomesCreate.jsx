@@ -75,11 +75,6 @@ export default class HomesCreate extends Component {
                         <Input type="text" placeholder="enter # of garage spaces" name="garage" value={this.state.garage} onChange={(e) => this.setState({garage: e.target.value})} style={{maxWidth: "500px"}} />
                         </FormGroup>
                         <FormGroup>
-                    {/* GARAGES */}
-                        <Label htmlForm='garage'>Garage:</Label>
-                        <Input type="text" placeholder="enter # of garage spaces" name="garage" value={this.state.garage} onChange={(e) => this.setState({garage: e.target.value})} style={{maxWidth: "500px"}} />
-                        </FormGroup>
-                        <FormGroup>
                     {/* ACREAGES */}
                         <Label htmlForm='acreage'>Acreage:</Label>
                         <Input type="text" placeholder="enter acreage" name="acreage" value={this.state.acreage} onChange={(e) => this.setState({acreage: e.target.value})} style={{maxWidth: "500px"}} />

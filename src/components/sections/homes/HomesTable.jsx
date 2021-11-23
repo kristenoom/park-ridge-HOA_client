@@ -5,7 +5,7 @@ import { CardColumns, Card, CardBody, CardTitle, CardText, Button } from 'reacts
 const HomesTable = (props) => {
 
     const homesMapper = () => {
-        return props.homess.map((homes, index) => {
+        return props.homes.map((homes, index) => {
             return (
                 <Card key={index.id} style={{ width: "300px" }}>
                     <CardBody>
@@ -49,6 +49,7 @@ const HomesTable = (props) => {
         <>
             <CardColumns>
                 {homesMapper()}
+        
             </CardColumns>
         </>
     )

@@ -7,7 +7,7 @@ export default class Signup extends Component {
         this.state = {
             username: "",
             passwordhash: "",
-            IsAdmin: false,
+            IsAdmin: true,
             sessionToken: "",
             updateToken: ""
         };
@@ -62,10 +62,7 @@ export default class Signup extends Component {
                         </FormGroup>
                         <FormGroup check>
                         <Label htmlFor="isAdmin">Are you a board member?</Label>
-                            <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: e.target.value })}>
-                            <option value="true">Yes</option>
-                            <option value="false">No</option>
-                            </Input>
+                        <Input type="radio" name="isAdmin" value={this.state.IsAdmin} onChange={(e) => this.setState({ IsAdmin: e.target.value })} />
                     </FormGroup>
                     <Button type="submit" color="success">Register</Button>
                 </Form>
