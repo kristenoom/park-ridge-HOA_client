@@ -134,6 +134,7 @@ body {
   background-color: #878787;
   color: white;
   font-size: 15px;
+  font-weight: bold;
   /* padding-left: 5px; */
   padding-top: 25px;
   width: 25%;
@@ -183,4 +184,9 @@ a:visited {
   border-radius: 10px;
   margin: 5px;
   display: inline-block;
+}
+
+.accordion-header,
+.accordion-header button {
+  font-weight: bold;
 }
