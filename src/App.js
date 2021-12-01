@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/site/Header.jsx";
 import Sidebar from "./components/site/Sidebar.jsx";
 import Footer from "./components/site/Footer.jsx";

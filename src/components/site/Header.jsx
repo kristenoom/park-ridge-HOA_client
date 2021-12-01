@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 import Signup from '../../auth/Signup';
 import Login from '../../auth/Login';
-import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav } from 'reactstrap';
 
 export default class Header extends Component {
     constructor(props) {
@@ -84,9 +84,9 @@ export default class Header extends Component {
                     </NavbarBrand>
                     <Nav className="companyName">Park Ridge Community Association</Nav>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
+                        {/* <NavItem>
                             <Link to="/register">Register</Link> | <Link to="/login">Login</Link>
-                        </NavItem>
+                        </NavItem> */}
                     </Nav>
                 </Navbar>
                 </header>

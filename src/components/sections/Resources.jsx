@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 import { Container } from 'reactstrap';
 
-export default class Resources extends Component {
-  render() {
+const Resources = (props) => {
     return (
         <Container className="main text">
             <h1>Resources</h1>
@@ -32,4 +31,4 @@ export default class Resources extends Component {
       </Container>
     )
   }
-}
+export default Resources;
