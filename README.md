@@ -1,4 +1,4 @@
-![](https://socialify.git.ci/kristenoom/park-ridge-HOA_client/image?description=1&descriptionEditable=Website%20for%20HOA%20in%20Warsaw%2C%20Indiana&font=Raleway&forks=1&language=1&logo=https%3A%2F%2Fparkridge.herokuapp.com%2Fassets%2FParkRidge_Logo.png&name=1&owner=1&pattern=Formal%20Invitation&stargazers=1&theme=Dark)
+![[object Object]](https://socialify.git.ci/kristenoom/park-ridge-HOA_client/image?description=1&descriptionEditable=Website%20for%20HOA%20in%20Warsaw%2C%20Indiana&font=Raleway&forks=1&language=1&logo=https%3A%2F%2Fparkridge.herokuapp.com%2Fassets%2FParkRidge_Logo.png&name=1&owner=1&pattern=Formal%20Invitation&stargazers=1&theme=Dark)
 
 # Getting Started with Create React App
 
