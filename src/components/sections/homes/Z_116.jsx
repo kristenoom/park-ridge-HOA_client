@@ -1,19 +1,19 @@
 import React from 'react';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 
-const Z083 = (props) => {
+const Z116 = (props) => {
 
     return (
         <Card style={{ width: "300px" }}>
             <CardBody>
                 <CardTitle tag="h5" className="text">
-                    <strong className="text-muted">160 Park Ridge Drive</strong>
+                    <strong className="text-muted">2031 Hemlock Lane</strong>
                 </CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">
-                    <strong>Lot 083</strong>
+                    <strong>Lot 116</strong>
                 </CardSubtitle>
             </CardBody>
-            <CardImg top width="100%" src='../../assets/083.jpeg' alt='Lot 083' />
+            <CardImg top width="100%" src='../../assets/116.jpeg' alt='Lot 116' />
             <CardBody>
                 <CardText className="text">
                     <strong>Bed: </strong> <br />
@@ -27,4 +27,4 @@ const Z083 = (props) => {
     )
   }
 
-export default Z083;
+export default Z116;

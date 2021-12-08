@@ -1,17 +1,17 @@
 import React from 'react';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 
-const Z087 = (props) => {
+const Z123 = (props) => {
 
     return (
         <Card style={{ width: "300px" }}>
             <CardBody>
                 <CardTitle tag="h5" className="text">
-                    <strong className="text-muted">120 Park Ridge Drive</strong>
+                    <strong className="text-muted">680 Pond Cypress Court</strong>
                 </CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted"><strong>Lot 087</strong></CardSubtitle>
+                <CardSubtitle tag="h6" className="mb-2 text-muted"><strong>Lot 123</strong></CardSubtitle>
             </CardBody>
-            <CardImg top width="100%" src='../../assets/087.jpeg' alt='Lot 087' />
+            <CardImg top width="100%" src='../../assets/123.jpeg' alt='Lot 123' />
             <CardBody>
                 <CardText className="text">
                     <strong>Bed: </strong> <br />
@@ -25,4 +25,4 @@ const Z087 = (props) => {
     )
   }
 
-export default Z087;
+export default Z123;
