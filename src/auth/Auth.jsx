@@ -9,7 +9,7 @@ const Auth = (props) => {
             <br />
         <Container className='master-container'>
             <Row>
-                <Col md='5'>
+                <Col md='4'>
                    <Signup updateToken={props.updateToken}/>
                 </Col>
                 <Col md='4'>
@@ -21,4 +21,4 @@ const Auth = (props) => {
     )
 }
 
-export default Auth
+export default Auth;

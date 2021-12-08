@@ -8,10 +8,9 @@ const Footer = () => {
         <footer>
             <section className="flex-container" id="footer">
                 <div className="flex-item-left">
-                    {/* <img src="./assets/ParkRidge_logo.png" alt="" className="flex-image-left" width="50px" /> */}
                     <p>
                         <strong>Park Ridge Community Association</strong><br />
-                        P.O. Box XXX<br />
+                        P.O. Box 793<br />
                         Warsaw, Indiana 46581
                     </p>
                 </div>
@@ -19,7 +18,9 @@ const Footer = () => {
                     <p><span className="email"><FontAwesomeIcon icon="fas fa-at" />&nbsp;<a href="mailto:parkridgeassociation@gmail.com">parkridgeassociation@gmail.com</a></span></p>
                 </div>
                 <div className="flex-item-right">
-                     <p><a href="https://www.facebook.com/groups/parkridgeassociation" target="_blank" rel="noopener noreferrer"><i className="icon-facebook2" /></a></p>
+                    <p>
+                        <a href="https://www.facebook.com/groups/parkridgeassociation" target="_blank" rel="noopener noreferrer"><img width="48px" src="./assets/f_logo.png" alt="icon facebook" /></a>&nbsp;&nbsp;<a href="https://nextdoor.com/g/smiz9950w/" target="_blank" rel="noopener noreferrer"><img width="48px" src="./assets/n_logo.png" alt="icon nextdoor" /></a>
+                    </p>
                 </div>
                 </section>
             <Row>
